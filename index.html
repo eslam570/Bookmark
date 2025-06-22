@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book</title>
+    <title>Bookmark</title>
         <!-- Fontawesome cdn -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Bootstrap css cdn -->
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Main style -->
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,15 +19,15 @@
     <div class="my-5 py-4 text-center form-card">
         <h2>Bookmark Your Favorite Websites</h2>
         <div class="form-group mx-5">
-            <label class="text-start fw-bold w-100" for="uname">Site Name</label>
-            <input type="text" name="uname" id="uname" class="form-control" placeholder="Enter Site Name">
+            <label  class="text-start fw-bold w-100  is-invalid" for="uname">Site Name</label>
+            <input oninput="validunam()" type="text" name="uname" id="uname" class="form-control" placeholder="Enter Site Name">
             <div class="alert alert-danger d-none py-3 mt-2" role="alert">
                 name must start with capital letter and have at least 3 characters
               </div>
         </div>
         <div class="form-group mx-5 mt-3 ">
-            <label class="text-start fw-bold w-100" for="url">Site URL</label>
-            <input  type="text" name="url" id="url" class="form-control" placeholder="Enter Site URL">
+            <label class="text-start fw-bold w-100 is-invalid  " for="url">Site URL</label>
+            <input oninput="validurl()"  type="text" name="url" id="url" class="form-control " placeholder="Enter Site URL">
             <div class="alert alert-danger d-none py-3 mt-2" role="alert">
                 please enter a valid url
               </div>
@@ -44,7 +47,17 @@
                     <th>Delete</th>
             </tr>
             </thead>
-            
+            <tbody id="tableData">
+              <!-- <tr>
+                <td>1</td>
+                    <td> Name</td>
+                    <td><p class="btn btn-primary"><i class="fa-solid fa-pen"></i> Update</p></td>
+                    <td><p class="btn btn-warning"><i class="fa-regular fa-eye"></i> Visit</p></td>
+                    <td><p class="btn btn-danger"><i class="fa-solid fa-trash"></i> Delete</p></td>
+              </tr> -->
+              <!-- <tr > <td colspan="5">No Match</td> </tr> -->
+                
+            </tbody>
         </table>
     </div>
 </div>
@@ -91,7 +104,9 @@ class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-conte
   </p>
 </div>
 
-     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap js cdn -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Main js -->
     <script src="js/main.js"></script>  
 </body>
 </html>

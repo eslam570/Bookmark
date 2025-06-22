@@ -135,3 +135,27 @@ searchBookmarks(this.value)
 })
 // 1-
 closeBtn.addEventListener("click",closeModal)
+function validunam(){
+    var regex=/^[A-Z][a-z]{3,8}$/;
+    var unamevalid=uname.value;
+    if(regex.test(unamevalid)){
+        uname.classList.add(`is-valid`)
+        uname.classList.remove(`is-invalid`)
+    }
+    else{
+         uname.classList.remove(`is-valid`)
+        uname.classList.add(`is-invalid`)
+    }
+}
+function validurl(){
+    var regex= /^(https?:\/\/)[^\s/$.?#].[^\s]*$/;
+    var urlvalid=url.value;
+    if(regex.test(urlvalid)){
+        url.classList.add(`is-valid`)
+       url.classList.remove(`is-invalid`)
+    }
+    else{
+        url.classList.remove(`is-valid`)
+        url.classList.add(`is-invalid`)
+    }
+}
